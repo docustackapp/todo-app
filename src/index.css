@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global font */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Checkbox pop animation */
+@keyframes checkPop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.checkbox-checked {
+  animation: checkPop 300ms ease forwards;
+}
+
+/* Smooth color transitions for dark mode */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease;
+  transition-duration: 150ms;
+}
